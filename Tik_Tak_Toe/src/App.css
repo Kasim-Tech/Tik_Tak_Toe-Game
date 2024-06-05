@@ -1,0 +1,82 @@
+*{
+  background-color: beige;
+}
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  
+}
+
+.board-wrapper {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.Square {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.Square h5 {
+  margin: 0;
+  font-size: 2em; /* Default font size */
+}
+
+.message {
+  font-size: 2em; /* Default message font size */
+  margin: 20px 0;
+  text-align: center;
+}
+
+.start-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .board-wrapper {
+    max-width: 240px;
+  }
+
+  .board-grid {
+    gap: 2px;
+  }
+
+  .Square {
+    border: 1px solid; /* Adjust border size for smaller screens */
+  }
+
+  .Square h5 {
+    font-size: 3em; /* Larger font size for mobile view */
+  }
+
+  .message {
+    font-size: 3em; /* Larger message font size for mobile view */
+  }
+
+  .play-again-button {
+    font-size: 1.5em; /* Larger button font size for mobile view */
+  }
+}
